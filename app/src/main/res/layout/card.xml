@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:id="@+id/notification_text"
+        android:text="Howdy!!!"
+        android:height="100dp"
+        android:width="200dp"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/notification_text">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <com.mohitmamoria.chathead.CustomEditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification_reply_box"
+            android:layout_weight="3"
+            android:hint="Reply..."
+            android:textColor="@android:color/black"
+            android:maxLines="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification_reply_send"
+            android:layout_weight="1"
+            android:text="Send"/>
+
+    </LinearLayout>
+</RelativeLayout>
